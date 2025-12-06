@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. D.M.S Bandara</title>
+
+<style>
+body { margin:0; font-family:Arial,sans-serif; background:#f0f4ff; color:#000; transition:0.5s; }
+nav { background:#0056b3; padding:15px; text-align:center; position:sticky; top:0; z-index:10;}
+nav a { color:white; margin:0 15px; text-decoration:none; font-weight:bold; }
+nav a:hover { text-decoration:underline; }
+#mode-btn { background:white; color:#0056b3; padding:8px 16px; border-radius:8px; border:none; cursor:pointer; font-weight:bold; float:right; margin-right:20px; }
+
+header { background:linear-gradient(135deg,#0056b3,#4fa3ff); padding:60px 20px; text-align:center; color:white; }
+header h1 { font-size:3em; margin:0; }
+
+.container { width:90%; max-width:1100px; background:white; margin:40px auto; padding:30px; border-radius:12px; box-shadow:0 0 20px rgba(0,0,0,0.15); }
+
+.section-title { font-size:1.8em; color:#0056b3; border-left:5px solid #0056b3; padding-left:10px; margin-top:30px; }
+ul { list-style:none; padding:0; }
+ul li { padding:10px 0; border-bottom:1px solid #ddd; }
+
+form input, form textarea, form select { width:100%; padding:12px; margin:10px 0; border-radius:8px; border:1px solid #ccc; font-size:1em; }
+form button { background:#0056b3; color:white; padding:14px; border-radius:8px; border:none; font-size:1.1em; cursor:pointer; width:100%; }
+
+.slider { width:100%; max-width:1000px; margin:20px auto; overflow:hidden; border-radius:10px; }
+.slider img { width:100%; display:none; border-radius:10px; }
+
+footer { background:#e6ecff; padding:20px; text-align:center; margin-top:40px; }
+</style>
+</head>
+<body>
+
+<nav>
+<button id="mode-btn" onclick="toggleMode()">Dark Mode</button>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#appointment">Appointment</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<header>
+<h1>Dr. D.M.S Bandara</h1>
+<p>Consultant Doctor – Ragama Main Hospital</p>
+</header>
+
+<div class="container" id="about">
+<h2 class="section-title">About Doctor</h2>
+<p>Dr. D.M.S Bandara is an experienced and dedicated medical professional serving at Ragama Main Hospital.</p>
+<h2 class="section-title">Qualifications</h2>
+<ul>
+<li>MBBS – Sri Lanka</li>
+<li>MD – Internal Medicine</li>
+<li>Specialised in Emergency & General Medicine</li>
+</ul>
+</div>
+
+<div class="container" id="services">
+<h2 class="section-title">Services</h2>
+<ul>
+<li>General Medical Consultation</li>
+<li>Diagnosis & Treatment</li>
+<li>Emergency Care</li>
+<li>Follow-Up Visits</li>
+<li>Health Advice & Lifestyle Guidance</li>
+</ul>
+</div>
+
+<div class="container" id="appointment">
+<h2 class="section-title">Make an Appointment</h2>
+<form action="mailto:example@gmail.com" method="post" enctype="text/plain">
+<input type="text" name="Name" placeholder="Your Name" required>
+<input type="email" name="Email" placeholder="Your Email" required>
+<input type="tel" name="Phone" placeholder="Phone Number" required>
+<select name="Service">
+<option>General Consultation</option>
+<option>Emergency Care</option>
+<option>Follow-Up Visit</option>
+</select>
+<textarea name="Message" rows="4" placeholder="Describe your issue"></textarea>
+<button type="submit">Send Appointment Request</button>
+</form>
+</div>
+
+<div class="container" id="gallery">
+<h2 class="section-title">Medical & Hospital Gallery</h2>
+<div class="slider" id="slider">
+<img src="https://images.unsplash.com/photo-1588776814546-7d82668b1138?auto=format&fit=crop&w=1000&q=80" style="display:block;">
+<img src="C:\Users\Win10-L\Desktop\ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg">
+<img src="C:\Users\Win10-L\Desktop\download.jpeg">
+<img src=""C:\Users\Win10-L\Desktop\download (1).jpeg"">
+<img src="C:\Users\Win10-L\Desktop\images.jpeg">
+<img src=""C:\Users\Win10-L\Desktop\download (2).jpeg"">
+<img src=""C:\Users\Win10-L\Desktop\images (1).jpeg"">
+<img src="https://images.unsplash.com/photo-1588776814650-2a54c2a3a7f2?auto=format&fit=crop&w=1000&q=80">
+<img src="https://images.unsplash.com/photo-1588776814295-5f1e2c3d42c3?auto=format&fit=crop&w=1000&q=80">
+<img src="https://images.unsplash.com/photo-1588776814128-8eabcc22f0b4?auto=format&fit=crop&w=1000&q=80">
+</div>
+</div>
+
+<div class="container" id="contact">
+<h2 class="section-title">Contact Information</h2>
+<ul>
+<li><strong>Hospital:</strong> Ragama Main Hospital</li>
+<li><strong>Address:</strong> Ragama, Sri Lanka</li>
+<li><strong>Email:</strong> example@gmail.com</li>
+<li><strong>Phone:</strong> +94 71 234 5678</li>
+</ul>
+</div>
+
+<footer>© 2025 Dr. D.M.S Bandara – All Rights Reserved</footer>
+
+<script>
+// Dark Mode
+function toggleMode() {
+    document.body.classList.toggle("dark");
+    if(document.body.classList.contains("dark")) {
+        document.body.style.background="#1c1c1c";
+        document.body.style.color="white";
+        document.getElementById("mode-btn").innerText="Light Mode";
+    } else {
+        document.body.style.background="#f0f4ff";
+        document.body.style.color="black";
+        document.getElementById("mode-btn").innerText="Dark Mode";
+    }
+}
+
+// Simple slider
+let sliderImages = document.querySelectorAll("#slider img");
+let current = 0;
+setInterval(function(){
+    sliderImages[current].style.display="none";
+    current = (current+1) % sliderImages.length;
+    sliderImages[current].style.display="block";
+}, 3000);
+</script>
+
+</body>
+</html>
+
+
